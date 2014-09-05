@@ -8,17 +8,17 @@ Since this is workstation focused, I assume the scripts are not being run as roo
 GIT
 ---
 
-h3. Install GIT on Linux Debian/Ubuntu/Mint
+### Install GIT on Linux Debian/Ubuntu/Mint
 
 Subversion
 ----------
 
-h3. Install Subversion on Linux Debian/Ubuntu/Mint
+### Install Subversion on Linux Debian/Ubuntu/Mint
 
 Dropbox
 -------
 
-h3. Linux Debian/Ubuntu/Mint
+### Linux Debian/Ubuntu/Mint
 
 This script automates the installation of Dropbox!  To install, type the following commands, assuming you're starting from the config-me directory:
 
@@ -28,7 +28,11 @@ This script automates the installation of Dropbox!  To install, type the followi
 
 You may get a prompt to install some additional packages, I recommend doing so.  The script will install the correct 32 or 64-bit package and start the Dropbox app, so be ready to either create a new Dropbox account or enter your existing Dropbox credentials.
 
-h3. Multiple Dropboxen on Linux Debian/Ubuntu/Mint
+References:
+
+1. [Dropbox](https://www.dropbox.com/install?os=lnx)
+
+### Multiple Dropboxen on Linux Debian/Ubuntu/Mint
 
 This script installs a 2nd instance of Dropbox! If you're like me, you may have separate Dropbox accounts for work and home. This script installs a 2nd Dropbox called "Dropbox-Work" and configures it to launch both each time you log in.  After setup you can edit the colors of the different Dropbox icons so you know which icon is for which account. Enjoy!  To install:
 
@@ -36,10 +40,14 @@ This script installs a 2nd instance of Dropbox! If you're like me, you may have 
     $ chmod +x install-another-dropbox-debian.sh
     $ ./install-another-dropbox-debian.sh
 
+References:
+
+1. [maketecheasier.com](http://www.maketecheasier.com/run-multiple-dropbox-accounts-in-mac-and-linux/)
+
 KeePassX
 --------
 
-h3. Linux Debian/Ubuntu/Mint
+### Linux Debian/Ubuntu/Mint
 
 This script automates the installation of the super-userful password manager KeePassX.  To install:
 
