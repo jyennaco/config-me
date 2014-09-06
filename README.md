@@ -5,6 +5,24 @@ Repository for basic configuration settings such as gitignore and svnignore.  Th
 
 Since this is workstation focused, I assume the scripts are not being run as root and may require sudo password entry one time per script (if required).
 
+Basics
+------
+
+### debian-basics
+
+This script installs some basic packages for debian-based Linux:
+
+* vim
+* git
+* subversion
+* curl
+
+To run this script:
+
+    $ cd debian-basics
+    $ chmod +x install-debian-basics.sh
+    $ ./install-debian-basics.sh
+
 GIT
 ---
 
