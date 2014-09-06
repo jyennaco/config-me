@@ -52,6 +52,13 @@ This script installs a 2nd instance of Dropbox! If you're like me, you may have 
     $ chmod +x install-another-dropbox-debian.sh
     $ ./install-another-dropbox-debian.sh
 
+Next, to configure both Dropboxen to start on boot, there are a couple ways to do it.  The easiest is to 
+
+1. Open "Startup Applications"
+2. Click "Add"
+3. Browse for and select the install-another-dropbox-debian.sh script, and add a title and description
+4. Profit!
+
 References:
 
 1. [maketecheasier.com](http://www.maketecheasier.com/run-multiple-dropbox-accounts-in-mac-and-linux/)
