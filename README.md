@@ -8,12 +8,24 @@ Since this is workstation focused, I assume the scripts are not being run as roo
 GIT
 ---
 
-### Install GIT on Linux Debian/Ubuntu/Mint
+### GIT global ignore config on Linux Debian/Ubuntu/Mint
+
+This script adds some useful global ignores for GIT, by copying the .gitignore_global file to your GIT configuration.  To run this script:
+
+    $ cd git
+    $ chmod +x update-git.sh
+    $ ./update-git.sh
 
 Subversion
 ----------
 
-### Install Subversion on Linux Debian/Ubuntu/Mint
+### Subversion global ignore config on Linux Debian/Ubuntu/Mint
+
+This script adds some useful global ignores for Subversion, by adding the ignores in the svnignore_global file to your global Subversion config.  To run this script: 
+
+    $ cd subversion
+    $ chmod +x update-svn.sh
+    $ ./update-svn.sh
 
 Dropbox
 -------
