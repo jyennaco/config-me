@@ -97,4 +97,19 @@ References:
 
 1. [malwaretips.com](http://malwaretips.com/threads/how-to-install-keepassx-2-0-alpha-4-on-linux.20699/)
 
+Spotify
+-------
+
+### Linux Debian/Ubuntu/Mint
+
+This script automated the install of Spotify on Debian-based Linux.  To install
+
+    $ cd spotify
+    $ chmod +x install-spotify-debian.sh
+    $ ./install-spotify-debian.sh
+    $ *Type sudo password when prompted*
+
+References:
+
+1. [Spotify Preview](https://www.spotify.com/us/download/previews/)
 
