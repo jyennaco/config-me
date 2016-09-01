@@ -1,0 +1,73 @@
+# Variables
+export PS1="[\W \A]\$ "
+
+# Aliases
+alias ll='ls -lGha $@'
+alias edit='open -a /Applications/TextWrangler.app $@'
+
+# Alias for jumping to different dirs
+alias homer='cd ~/Documents/homer'
+alias assets='cd /Volumes/Transcend/jackpine-cons3rt-assets'
+alias community='cd ~/Documents/community-cons3rt-assets/'
+alias fsid='cd ~/Documents/fsid-cons3rt-assets'
+alias fortify='cd ~/Documents/testtool-adapter-fortify'
+alias sonar='cd ~/Documents/testtool-adapter-sonar'
+alias cons3rt='cd ~/Documents/cons3rt'
+alias pybart='cd ~/Documents/pyBART'
+alias pycons3rt='cd ~/Documents/pycons3rt'
+alias md='cd ~/Documents/html-to-markdown-converter'
+alias bart='cd ~/Documents/BART'
+alias guac='cd /Volumes/Transcend/jackpine-cons3rt-assets/application/guac-recipe/guacamole-0.99-singleasset'
+alias customer='cd /Volumes/Transcend/customer-cons3rt-assets'
+
+# Functions
+
+# Creates an asset zip file from the current working 
+# directory, and places the resulting file in the Downloads folder
+
+function azip() { 
+    if [ -z "$1" ] ; then 
+        echo "Zipfile name required"
+        return 1
+    fi
+    echo "Creating zip file: $1..."
+    zip -r $1 asset.properties doc media scripts config data src README* LICENSE* HELP* -x "doc\._*" -x "media\._*" -x "scripts\._*" -x "._*" -x \"*.DS_Store*\" -x \".DS_Store\"  -x \"*.svn\" -x \"*.git\" -x media\MEDIA_README 
+    echo "Moving zip file to ~/Downloads..."
+    mv $1 ~/Downloads/
+    echo "Created asset zip: ~/Downloads/$1"
+}
+
+# Creates a lInux asset skeleton
+
+function makeassetlinux() {
+    if [ -z "$1" ] ; then
+        echo "Asset name required"
+        return 1
+    fi
+    echo "Creating directory: $1..."
+    mkdir -p ./$1
+    echo "Copying the sample Linux asset as a template..."
+    cp -Rf ~/Documents/software-asset-linux/* ./$1/
+    echo "Setting the script name..."
+    mv ./$1/scripts/install.sh ./$1/scripts/$1.sh
+    echo "Updating asset.properties with the script name..."
+    sed -i '' "s|^installScript=.*|installScript=$1.sh|g" ./$1/asset.properties
+    echo "Created linux asset skeleton: $1"
+}
+
+function makeassetwindows() {
+    if [ -z "$1" ] ; then
+        echo "Asset name required"
+        return 1
+    fi
+    echo "Creating directory: $1..."
+    mkdir -p ./$1
+    echo "Copying the sample Windows asset as a template..."
+    cp -Rf ~/Documents/software-asset-windows-powershell/* ./$1/
+    echo "Setting the script name..."
+    mv ./$1/scripts/install.ps1 ./$1/scripts/$1.ps1
+    echo "Updating asset.properties with the script name..."
+    sed -i '' "s|^installScript=.*|installScript=$1.ps1|g" ./$1/asset.properties
+    echo "Created Windows asset skeleton: $1"
+}
+
