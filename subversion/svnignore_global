@@ -1,2 +1,2 @@
-global-ignores = *.o *.lo *.la *.al .libs *.so *.so.[0-9]* *.a *.pyc *.pyo *.DS_Store* .git *.iml .idea/ .idea *.ipr *.iws out/ .metadata .gradle *.swp local.properties .settings/ .loadpath *.launch .externalToolBuilders/ *.pydevproject
+global-ignores = *.o *.lo *.la *.al .libs *.so *.so.[0-9]* *.a *.pyc *.pyo *.DS_Store* .git *.iml .idea/ .idea *.ipr *.iws out/ .metadata .gradle *.swp local.properties .settings/ .loadpath *.launch .externalToolBuilders/ *.pydevproject venv/
 
